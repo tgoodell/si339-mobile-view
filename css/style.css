@@ -44,6 +44,12 @@ a {
     color: var(--raspberry-rose);
 }
 
+main a:hover {
+    color: var(--active-raspberry-rose);
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
 img {
     margin: auto;
     max-width: 50%;
@@ -88,6 +94,11 @@ nav ul {
 nav li {
     display: inline-block;
     margin: 0 1em;
+}
+
+nav li a:hover {
+    color: var(--active-raspberry-rose);
+    transition: 0.5s;
 }
 
 #active {
@@ -153,4 +164,16 @@ footer {
 footer p {
     margin: 0;
     color: var(--smoky-black);
+}
+
+/* Media Queries */
+
+@media (prefers-reduced-motion) {
+    main a:hover {
+        transition: 0s;
+    }
+
+    nav li a:hover {
+        transition: 0s;
+    }
 }
